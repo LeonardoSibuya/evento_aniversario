@@ -1,0 +1,76 @@
+@use 'variaveis';
+
+.aniversario {
+    padding: 80px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &--blue {
+        background-image: linear-gradient(variaveis.$corBg1, variaveis.$corBg2);
+    }
+
+    &--red {
+        background-image: linear-gradient(variaveis.$corBg2, variaveis.$corBg1);
+    }
+
+    &--left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__image {
+
+        img {
+        max-width: 360px;
+        border-radius: 8px
+        }
+    }
+
+    &__details {
+
+        &__title {
+            font-family: Fun-Party;
+            margin-bottom: 16px;
+            font-size: 40px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            text-align: center;
+            margin-top: 24px;
+
+            img {
+            max-width: 250px;
+            border-radius: 8px;
+            }
+        }
+
+        &__details {
+            text-align: center;
+
+            &__title {
+                font-family: Fun-Party;
+                margin-bottom: 16px;
+                font-size: 26px;
+            }
+    
+            &__text {
+                font-size: 14px;
+            }
+        }
+    }
+}
