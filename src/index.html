@@ -17,7 +17,7 @@
             <h1 class="hero__title">
                 OBA! Meu aniversário está chegando em:
                 <br>
-                <span id="contador"> 77d 27h 5m 30s</span>
+                <span id="contador"></span>
             </h1>
             <div class="info">
                 <ul class="info__list">
@@ -33,11 +33,15 @@
             </div>
             <div class="convidado">
                 <p class="convidado__text">
-                    E o melhor, você foi <b>convidado!</b> Clique no botão se você irá comparecer.
+                    E o melhor, você foi <b>convidado!</b> Insira seu nome e clique no botão para confirmar sua presença.
                 </p>
-                <button class="convidado__button">
-                    Eu vou
-                </button>
+                <form class="convidado__form" id="form-invite">
+                    <label for="name" class="convidado__form__label">Insira seu nome:</label>
+                    <input type="text" class="convidado__form__input" id="name" required>
+                    <button type="submit" id="btn-invite" class="convidado__form__button">
+                        Confirmar
+                    </button>
+                </form>
             </div>
         </div>
     </header>
